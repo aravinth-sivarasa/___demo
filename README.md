@@ -149,8 +149,7 @@ cases (success and failure). This can be achieved by Junit / Test NG /
 Mockito and Selenium. In addition, the following sheet has to be
 completed by relevant authorities to maintain the standards and Quality
 of application (ex CMMI, ISO and etc).
-
-  Version of Release   V1.2.1                                                    
+                                                    
 
 Product or Technology migration
 -------------------------------
