@@ -1,0 +1,49 @@
+<div>
+
+    <div class="col-lg-6 offset-lg-3">
+
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="txtUsername">Username</label>
+                <input [(ngModel)]="enteredUser.name" #name="ngModel" required type="text" class="form-control"
+                    id="txtUsername" placeholder="Username">
+
+                {{name.invalid}}
+            </div>
+
+            <div class="form-group col-md-6">
+                <label for="txtPassword">Password</label>
+                <input [(ngModel)]="enteredUser.password" type="password" class="form-control" id="txtPassword"
+                    placeholder="Password">
+            </div>
+
+        </div>
+        <div class="form-group">
+            <label for="txtUsername">Description</label>
+            <input [(ngModel)]="enteredUser.description" type="text" class="form-control" id="txtDescription"
+                placeholder="Description">
+        </div>
+        <button (click)="add()" class="btn btn-primary">Submit</button>
+    </div>
+
+</div>
+
+<br />
+
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Username</th>
+            <th scope="col">Description</th>
+            <th class="" scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of userMap | keyvalue" (click)=select(user.value)>
+            <td>{{user.value.name}}</td>
+            <td>{{user.value.description}}</td>
+            <td><button (click)="remove(user.value)" class="btn btn-link">delete</button></td>
+        </tr>
+    </tbody>
+</table>
