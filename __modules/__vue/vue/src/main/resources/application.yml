@@ -1,9 +1,9 @@
 server:
-  port: 8443
-  ssl:
-    key-store: classpath:vue.p12
-    key-store-password: keystore
-    keyStoreType: PKCS12
+  port: 8081
+#  ssl:
+#    key-store: classpath:vue.p12
+#    key-store-password: keystore
+#    keyStoreType: PKCS12
 
 services:
   port: 8444
